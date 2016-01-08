@@ -9,7 +9,7 @@ api = Api(app)
 
 api.add_resource(User, '/User', '/user/<int:id>')
 app.register_blueprint(api_blueprint)
-
+app.run(host="127.0.0.1", port=8080, debug=True)
 
 @app.teardown_appcontext
 def shutdown_session(exception=None):
